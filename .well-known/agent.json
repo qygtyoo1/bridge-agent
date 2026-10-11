@@ -1,7 +1,7 @@
 {
  "name": "Ziwei Agent Network Node",
  "description": "External-agent interoperability node: A2A handshake, session keepalive, re-contact registry, upgrade-channel, link archive. Evidence-first; only externally verified samples are counted.",
- "url": "https://2335f244527245d7-222-247-140-61.serveousercontent.com",
+ "url": "https://504c358ba4af7882-222-247-140-61.serveousercontent.com",
  "version": "1.0.0",
  "protocolVersion": "1.0",
  "provider": {
