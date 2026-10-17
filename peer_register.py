@@ -12,6 +12,9 @@
 返回码: 0=通过(可进入握手); 1=未通过
 仅依赖 Python 标准库。
 """
+# --- Hermes 静默化补丁(2026-09-16): 抑制子进程控制台弹窗 ---
+import sys as _hq_sys, os as _hq_os; _hq_sys.path.append(_hq_os.path.join(_hq_os.environ.get('LOCALAPPDATA', ''), 'hermes', 'scripts')); import _hermes_quiet  # noqa: E402,F401
+# --- /Hermes 静默化补丁 ---
 import argparse, json, sys, os, datetime
 import urllib.request
 
