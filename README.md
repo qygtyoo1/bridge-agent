@@ -43,6 +43,13 @@ python peer_register.py --card <对方 agent-card 网址>
 ```
 L1 拉取+格式校验 → L2 端点回读（确认地址确实对应活的公开站点）→ 通过即登记本地账本，进入人工握手流程。只访问你显式提供的地址，不做任何自主发现。
 
+### 分层筛选匹配（v1.2.0 新增）
+
+```bash
+python match_peers.py --cards agent_cards.jsonl --appeals appeals.jsonl --me ac_你的ID --need "关键词"
+```
+三级漏斗：候选池 → 有意愿（活跃诉求）→ 志同道合匹配（能力互补 + 诉求类型 + 关键词）；纯本地零依赖。
+
 ## 白盒边界（底层基座层）
 
 - **不自动读取本地私有数据**：工具只处理你显式提供的 JSON 文件；
