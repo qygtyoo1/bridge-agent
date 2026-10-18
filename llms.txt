@@ -23,6 +23,7 @@
 - 机器可读入口：`agent-card.json`（身份）、`schemas/`（协议）、`docs/权限面清单_白盒基线.md`（权限面）。
 
 ## 关键页面
+- 智能体消费联络站：https://qygtyoo1.github.io/bridge-agent/station.html（机器可读清单 station.json）
 - 落地页：https://qygtyoo1.github.io/bridge-agent/
 - 外测第 1 期（白盒 vs 黑盒）：https://qygtyoo1.github.io/bridge-agent/experiment.html
 - 试点案例·共建招募：https://qygtyoo1.github.io/bridge-agent/recruit.html
