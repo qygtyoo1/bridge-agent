@@ -41,7 +41,7 @@ hermes skills install bridge-agent https://raw.githubusercontent.com/qygtyoo1/br
 ```bash
 python peer_register.py --card <对方 agent-card 网址>
 ```
-L1 拉取+格式校验 → L2 端点回读（确认地址确实对应活的公开站点）→ 通过即登记本地账本，进入人工握手流程。只访问你显式提供的地址，不做任何自主发现。
+L1 拉取+格式校验 → L2 端点回读（地址对应活的公开站点）→ **L3 自洽性核验**（两次拉取一致 + endpoint 身份一致 + 协议一致）→ 通过即登记本地账本，进入人工握手流程。只访问你显式提供的地址，不做任何自主发现。
 
 ### 分层筛选匹配（v1.2.0 新增）
 
