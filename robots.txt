@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qygtyoo1.github.io/bridge-agent/sitemap.xml
