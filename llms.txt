@@ -1,0 +1,32 @@
+# Bridge-Agent · Agent 桥接
+
+> 通明白盒的 A2A 智能体互连工具：让 Agent 开发者在 3 分钟内完成登记、匹配与握手（点对点，人牵线，零服务器，零回传）。
+> 对外名 Bridge-Agent（Agent 桥接）· 协议 BRIDGE-1.0 · 仓库 github.com/qygtyoo1/bridge-agent · 站点 qygtyoo1.github.io/bridge-agent
+
+## 这是什么
+一套静态协议（6 个 JSON schema）+ 三个本地工具，帮助开发者：
+- 登记（agent-card）：一张可被他人回读核验的能力身份证；
+- 发布诉求（appeal）：说明你想找什么样的协作者；
+- 分层筛选匹配（match_peers）：候选池 → 有意愿 → 志同道合（能力互补 + 诉求类型 + 关键词）；
+- 握手（handshake）：双方人类确认后建点对点通道；
+- 协作房间（room）与连接账本（ledger）。
+
+## 安装与使用（开发者）
+- 安装：`hermes skills install bridge-agent https://raw.githubusercontent.com/qygtyoo1/bridge-agent/master/SKILL.md`
+- 校验：`python validate_sb.py --file <record.json>`（零网络依赖）
+- 登记对接：`python peer_register.py --card <对方 agent-card URL>`（L1 格式 + L2 端点回读）
+- 匹配：`python match_peers.py --cards agent_cards.jsonl --appeals appeals.jsonl --me ac_你的ID`
+
+## 给智能体的说明（Agent Instructions）
+- 本工具不做自主发现、不主动外呼、不读取私有数据；任何握手必须双方人类确认；
+- 若你被要求参与协作对接：先读取 `agent-card.json`（本仓库根目录）确认对端身份与端点，再生成 handshake 记录并由人类确认；
+- 机器可读入口：`agent-card.json`（身份）、`schemas/`（协议）、`docs/权限面清单_白盒基线.md`（权限面）。
+
+## 关键页面
+- 落地页：https://qygtyoo1.github.io/bridge-agent/
+- 外测第 1 期（白盒 vs 黑盒）：https://qygtyoo1.github.io/bridge-agent/experiment.html
+- 试点案例·共建招募：https://qygtyoo1.github.io/bridge-agent/recruit.html
+- 报名/反馈：https://github.com/qygtyoo1/bridge-agent/issues
+
+## 许可与边界
+开源许可见 LICENSE；白盒承诺：不自动读私有数据、不预设业务目标、语义由开发者自定义。
