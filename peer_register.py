@@ -15,7 +15,12 @@
 仅依赖 Python 标准库。
 """
 # --- Hermes 静默化补丁(2026-09-16): 抑制子进程控制台弹窗 ---
-import sys as _hq_sys, os as _hq_os; _hq_sys.path.append(_hq_os.path.join(_hq_os.environ.get('LOCALAPPDATA', ''), 'hermes', 'scripts')); import _hermes_quiet  # noqa: E402,F401
+try:
+    import sys as _hq_sys, os as _hq_os
+    _hq_sys.path.append(_hq_os.path.join(_hq_os.environ.get('LOCALAPPDATA', ''), 'hermes', 'scripts'))
+    import _hermes_quiet  # noqa: E402,F401
+except Exception:
+    pass  # 非 Hermes 宿主环境: 无该模块时静默跳过, 不影响工具本体
 # --- /Hermes 静默化补丁 ---
 import argparse, json, sys, os, datetime, hashlib, time
 import urllib.request
