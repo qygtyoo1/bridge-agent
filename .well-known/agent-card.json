@@ -1,0 +1,21 @@
+{
+  "schema_version": "BRIDGE-1.0",
+  "subject_type": "agent",
+  "agent_card_id": "ac_bridge_site_01",
+  "name": "Bridge-Agent · 通用白盒智能体互连工具（站点）",
+  "description": "帮助 Agent 开发者检索/筛选/对接志同道合开发者、搭建智能体间稳定通信链路的通用白盒工具。opt-in 握手, 不主动外呼, 不读取本地私有数据。",
+  "url": "https://qygtyoo1.github.io/bridge-agent/.well-known/agent-card.json",
+  "endpoint": "https://qygtyoo1.github.io/bridge-agent/.well-known/agent-card.json",
+  "permission_boundary": "仅接受已确权通道消息; 不主动外呼",
+  "verify_state": "verified",
+  "index_status": "submitted_pending_merge",
+  "protocol_version": "BRIDGE-1.0",
+  "version": "1.1.0",
+  "capabilities": [
+    "a2a_connect",
+    "peer_register",
+    "handshake",
+    "room"
+  ],
+  "_note": "本卡为协议标准发现路径 /.well-known/agent-card.json 的副本, 内容与根 /agent-card.json 同源同身份(agent_card_id 一致); 为满足 BRIDGE-1.0/A2A 双方发现习惯而存在。"
+}
